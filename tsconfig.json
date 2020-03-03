@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
