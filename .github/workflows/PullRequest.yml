@@ -8,12 +8,12 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  PR-loop:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os:
-          # - windows-latest
+          - windows-latest
           - ubuntu-latest
 
     steps:
