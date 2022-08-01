@@ -3,30 +3,32 @@
   "version": "0.1.0",
   "description": "Typescript/NodeJS empty project",
   "main": "index.js",
-  "scripts": {
-    "build": "gulp",
-    "test": "gulp test"
-  },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "@types/chai": "^4.2.9",
-    "@types/mocha": "^7.0.1",
-    "@typescript-eslint/eslint-plugin": "^2.21.0",
-    "@typescript-eslint/parser": "^2.21.0",
-    "chai": "^4.2.0",
-    "eslint": "^6.8.0",
-    "fs-extra": "^8.1.0",
-    "gulp": "^4.0.2",
-    "gulp-eslint": "^6.0.0",
-    "gulp-mocha": "^7.0.2",
-    "gulp-typescript": "^6.0.0-alpha.1",
-    "merge-stream": "^2.0.0",
-    "mocha": "^7.1.0",
-    "ts-node": "^8.6.2"
+  "scripts": {
+    "ci": "npm run build && npm run test:coverage && npm run lint && npm run check",
+    "build": "npx tsc -p tsconfig.build.json",
+    "lint": "npx eslint src",
+    "check": "npx prettier --check src",
+    "format": "npx prettier --write src",
+    "test": "npx jest",
+    "test:coverage": "npx jest --coverage",
+    "test:debug": "npx jest --runInBand"
   },
   "dependencies": {
-    "@types/node": "^13.7.7",
-    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.2",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "~5.29.0",
+    "@typescript-eslint/parser": "~5.29.0",
+    "eslint": "~8.18.0",
+    "eslint-config-prettier": "~8.1.0",
+    "eslint-plugin-prettier": "~4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
   }
 }

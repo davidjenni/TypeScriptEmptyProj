@@ -1,5 +1,5 @@
 export class Client {
-    execute(): void {
-        1;
-    }
+  execute(): void {
+    1;
+  }
 }

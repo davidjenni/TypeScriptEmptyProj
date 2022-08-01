@@ -1,33 +1,21 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Mocha All tests",
-            "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
-            "cwd": "${workspaceFolder}",
-            "args": [
-                "--require", "ts-node/register",
-                "-u", "bdd",
-                "--timeout", "999999",
-                "test/**/*.ts"
-            ],
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Mocha Current File",
-            "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
-            "cwd": "${workspaceFolder}",
-            "args": [
-                "--require", "ts-node/register",
-                "-u", "bdd",
-                "--timeout", "999999",
-                "${file}"
-            ],
-            "internalConsoleOptions": "neverOpen"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-node",
+      "request": "launch",
+      "name": "Debug current test file",
+      "skipFiles": [ "<node_internals>/**" ],
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose",
+        "--runInBand",
+        "--no-cache",
+        "--testPathPattern",
+        "${fileBasename}"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
 }
