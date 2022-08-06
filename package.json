@@ -10,7 +10,7 @@
     "build": "npx tsc -p tsconfig.build.json",
     "lint": "npx eslint src",
     "check": "npx prettier --check .",
-    "format": "npx prettier --write .",
+    "prettier": "npx prettier --write .",
     "test": "npx jest",
     "test:coverage": "npx jest --coverage --silent",
     "test:debug": "npx jest --runInBand"
