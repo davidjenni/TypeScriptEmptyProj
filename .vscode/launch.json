@@ -5,15 +5,9 @@
       "type": "pwa-node",
       "request": "launch",
       "name": "Debug current test file",
-      "skipFiles": [ "<node_internals>/**" ],
+      "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
-      "args": [
-        "--verbose",
-        "--runInBand",
-        "--no-cache",
-        "--testPathPattern",
-        "${fileBasename}"
-      ],
+      "args": ["--verbose", "--runInBand", "--no-cache", "--testPathPattern", "${fileBasename}"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
     }

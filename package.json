@@ -9,14 +9,13 @@
     "ci": "npm run build && npm run test:coverage && npm run lint && npm run check",
     "build": "npx tsc -p tsconfig.build.json",
     "lint": "npx eslint src",
-    "check": "npx prettier --check src",
-    "format": "npx prettier --write src",
+    "check": "npx prettier --check .",
+    "format": "npx prettier --write .",
     "test": "npx jest",
-    "test:coverage": "npx jest --coverage",
+    "test:coverage": "npx jest --coverage --silent",
     "test:debug": "npx jest --runInBand"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^28.1.6",
     "@types/node": "^18.6.4",
