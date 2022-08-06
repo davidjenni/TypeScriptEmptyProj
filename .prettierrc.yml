@@ -1,0 +1,5 @@
+# https://prettier.io/docs/en/options.html
+# mostly stick with defaults, as per prettier's option philosophy
+# note that prettier also integrates with .editorconfig settings
+bracketSpacing: true
+singleQuote: true
