@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "",
   "license": "MIT",
+  "bugs": "https://github.com/davidjenni/TypeScriptEmptyProj/issues",
+  "engines": {
+    "node": ">= 16",
+    "npm": ">= 8"
+  },
   "scripts": {
     "ci": "npm run build && npm run test:coverage && npm run lint && npm run check",
     "build": "npx tsc -p tsconfig.build.json",
